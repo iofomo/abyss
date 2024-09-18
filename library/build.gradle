@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    buildToolsVersion "30.0.3"
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 29
+        targetSdkVersion 30
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ''
+            }
+        }
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            jniDebuggable true
+            debuggable true
+        }
+        debug {
+            jniDebuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    externalNativeBuild {
+        cmake {
+            path file('src/main/jni/CMakeLists.txt')
+            version '3.6.0'
+        }
+    }
+}
+
+dependencies {
+}

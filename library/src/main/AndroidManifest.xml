@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.iofomo.opensrc.abyss.sdk">
+
+    <application>
+        <service
+            android:process=":MTSTCProc"
+            android:name="com.iofomo.opensrc.abyss.sdk.component.MTSTCService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <provider
+            android:name="com.iofomo.opensrc.abyss.sdk.component.MTSTCProvider"
+            android:authorities="${applicationId}.component.MTSTCProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":MTSTCProc"
+            />
+    </application>
+
+</manifest>
