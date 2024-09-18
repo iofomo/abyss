@@ -1,6 +1,38 @@
-这是个可运行的demo app。
-so的代码在app/src/main/jni里。
-app/src/main/jni/test是各种c的demo,测试用的，test/usedemo.c当前就是那些实际你文档上列出的那些trace的点。
-jni/app下面是文档trace的具体实现。
-其他的c代码就是框架实现本身。
-在第一次运行demo后,通过build.sh就可以后续快速编译方便测试
+# Abyss
+
+## 说明
+
+`Abyss`是`Android`平台下应用级系统调用拦截框架。
+
+详细的文档可参考：
+
+[【Abyss】Android平台应用级系统调用拦截框架](https://www.iofomo.com/blog/opensrcabyss)
+
+## 快速开始
+
+本项目在以下开发环境中编译通过：
+
+-   Android Studio：4.2
+-   Gradle：6.9.2
+-   CMakeLists：3.6.0
+-   NDK：21.4.7075529
+
+```shell
+$ ./gradlew build
+```
+
+## 感谢小伙伴们
+
+![](doc/README.assets/thanks.png)
+
+## 许可协议
+
+本项目基于`MIT`许可协议，详情查看 [许可协议](doc/LICENSE) 文档。
+
+>   本项目和所有的工具都是MIT许可证下的开源工具，这意味着你可以完全访问源代码，并可以根据自己的需求进行修改。
+
+## 参考
+
+[https://github.com/proot-me/proot](https://github.com/proot-me/proot)
+
+[https://github.com/termux/proot](https://github.com/termux/proot)
